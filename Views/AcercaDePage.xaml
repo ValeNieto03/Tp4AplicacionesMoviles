@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tp4AplicacionesMoviles.Views.AcercaDePage"
+             BackgroundColor="#80000000">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="textValentina">Valentina Nieto</x:String>
+            <x:String x:Key="textDesarrollador">Desarrolladora del Software</x:String>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Image Source="githubfondo2.jpg"
+               Aspect="AspectFill"
+               Opacity="0.5"
+               VerticalOptions="FillAndExpand"
+               HorizontalOptions="FillAndExpand" />
+
+        <!-- Botón "Regresar" en la parte superior izquierda -->
+        <Button x:Name="btnVolver"
+                Text="Regresar"
+                BackgroundColor="#6110D3"
+                TextColor="White"
+                FontSize="20"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="10"
+                Clicked="btnVolver_Clicked" />
+
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="20">
+            <!-- Texto "Valentina Nieto" -->
+            <Label Text="{StaticResource textValentina}"
+                   TextColor="#6cc644"
+                   FontSize="35"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,10" />
+
+            <Image Source="fotodesarrollador.jpg"
+                   Aspect="AspectFit"
+                   Margin="0,0,0,20"
+                   HorizontalOptions="Center"
+                   HeightRequest="300"
+                   WidthRequest="230" />
+
+            <!-- Texto "Desarrolladora del Software" -->
+            <Label Text="{StaticResource textDesarrollador}"
+                   TextColor="#2B0B98"
+                   FontSize="29"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,20" />
+
+            <!-- Botones "Contacto" y "Enviar" en el centro -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                <Button x:Name="btnContacto"
+                        Text="Contacto"
+                        BackgroundColor="#6110D3"
+                        TextColor="White"
+                        FontSize="20"
+                        Clicked="btnContacto_Clicked" />
+
+                <Button x:Name="btnEmail"
+                        Text="Enviar Correo"
+                        BackgroundColor="#6110D3"
+                        TextColor="White"
+                        FontSize="20"
+                        Clicked="btnEmail_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

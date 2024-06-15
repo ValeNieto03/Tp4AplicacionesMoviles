@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tp4AplicacionesMoviles.Views.PrincipalPage"
+             BackgroundColor="#80000000">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:String x:Key="btnAcercaDe">Acerca De</x:String>
+            <x:String x:Key="GitHub">GitHub, Programadora Informática</x:String>
+            <x:String x:Key="QueEsGitHub">GitHub es una plataforma colaborativa que utiliza Git para alojar proyectos de desarrollo. Permite a los desarrolladores trabajar juntos, gestionar el código fuente, realizar un seguimiento de cambios, colaborar en la escritura de código, revisar el trabajo de otros y administrar problemas y solicitudes de extracción. Es popular tanto para proyectos de código abierto como privados.</x:String>
+            <x:String x:Key="btnSalir">Salir</x:String>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Image Source="githubfondo2.jpg"
+               Aspect="AspectFill"
+               Opacity="0.5" />
+
+        <StackLayout VerticalOptions="CenterAndExpand" Padding="20">
+            <!-- Texto "GitHub" -->
+            <Label Text="{StaticResource GitHub}"
+                   TextColor="White"
+                   FontSize="25"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,10" />
+
+            <!-- Texto "Qué es GitHub" -->
+            <Label Text="{StaticResource QueEsGitHub}"
+                   TextColor="White"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,0,20" />
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="10">
+                <!-- Botón Salir -->
+                <Button x:Name="btnSalir"
+                        Text="{StaticResource btnSalir}"
+                        BackgroundColor="#6110D3"
+                        TextColor="White"
+                        FontSize="20"
+                        Clicked="btnSalir_Clicked" />
+
+                <!-- Botón AcercaDe -->
+                <Button x:Name="btnAcercaDe"
+                        Text="{StaticResource btnAcercaDe}"
+                        BackgroundColor="#6110D3"
+                        TextColor="White"
+                        FontSize="20"
+                        Clicked="btnAcercaDe_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

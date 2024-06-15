@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tp4AplicacionesMoviles.Views.LoginPage"
+             BackgroundColor="Transparent"
+             xmlns:local="clr-namespace:Tp4AplicacionesMoviles.Views">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#6e5494" Offset="0.1"/>
+            <GradientStop Color="#003E8C" Offset="0.5"/>
+            <GradientStop Color="#6cc644" Offset="0.9"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid Padding="10" RowSpacing="20" VerticalOptions="CenterAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Image
+            Grid.Row="0"
+            Source="github_logo.png" 
+            Aspect="AspectFit"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Margin="0,20,0,20" />
+
+        <Entry 
+            Grid.Row="1"
+            x:Name="Usuario"
+            Placeholder="Usuario"
+            TextColor="{StaticResource gris}"
+            BackgroundColor="{StaticResource blanco}"
+            HeightRequest="60"
+            WidthRequest="296"
+            Margin="0, 0, 0, 20"
+            HorizontalOptions="Center" />
+
+        <Entry 
+            Grid.Row="2"
+            x:Name="Clave"
+            Placeholder="Clave" 
+            IsPassword="True"
+            TextColor="{StaticResource gris}"
+            BackgroundColor="{StaticResource blanco}"
+            HeightRequest="60"
+            WidthRequest="296"
+            Margin="0, 0, 0, 20"
+            HorizontalOptions="Center" />
+
+        <Button 
+            Grid.Row="3"
+            x:Name="btnAcceder"
+            Text="Acceder"
+            BackgroundColor="{StaticResource rojo}"
+            TextColor="{StaticResource blanco}"
+            WidthRequest="330"
+            HeightRequest="54"
+            HorizontalOptions="Center"
+            Margin="0, 0, 0, 20"
+            Clicked="OnLoginClicked" />
+    </Grid>
+</ContentPage>
